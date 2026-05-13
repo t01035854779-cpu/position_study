@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Trykker&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,47 @@
 a {
     color: #333;
     text-decoration: none;
+}
+/* 상단 */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #d9f3af;
+}
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: auto;
+    align-items: center;
+    background-color: yellow;
+    padding: 20px;
+}
+/* logo */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: "Trykker", serif;
+}
+/* menu */
+nav {
+    display: flex;
+    gap: 30px;
+}
+nav a {
+    font-size: 18px;
+}
+nav a:hover {
+    color: rgb(244, 162, 10);
+    text-decoration: underline;
+}
+/* main */
+main {
+    padding: 77.5px 0;
+    background-color: thistle;
 }
 /* 영상갤러리 */
 .contents {
@@ -19,7 +61,7 @@ a {
 }
 .card-list {
     display: flex;
-    gap: 10px;
+    gap: 50px;
 }
 .card {
     position: relative;
@@ -69,13 +111,17 @@ a {
 .musical-wrap {
     width: 1200px;
     margin: 50px auto;
-    display: flex;
+    /* display: flex; */
     gap: 20px;
+}
+.musical-wrap > h2 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 .musical-card {
     background-color: #fff;
     width: calc(100% / 4);
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .ticket-img img {
     width: 100%;
@@ -101,17 +147,71 @@ a {
     font-size: 70px;
     font-weight: bold;
 }
-.ticket-info{
+.ticket-info {
     padding: 10px;
 }
-.ticket-info h3{
+.ticket-info h3 {
     margin-bottom: 15px;
 }
-.ticket-sale{
+.ticket-sale {
     padding: 4px 8px;
     border-radius: 3px;
     font-size: 11px;
     border: 1px solid #ef3e43;
     margin-top: 15px;
-    display:inline-block;
+    display: inline-block;
+}
+/* sticky영역 */
+.sticky-wrap {
+    width: 1200px;
+    background-color: azure;
+    margin: auto;
+}
+.sticky-wrap h2 {
+    text-align: center;
+}
+.sticky-container {
+    display: flex;
+}
+.sticky-left {
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: wheat;
+}
+.stikcy-right {
+    width: 30%;
+    padding: 20px;
+    background-color: wheat;
+}
+.sticky-card {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 20px;
+}
+.sticky-box {
+    position: sticky;
+    top: 100px;
+    background-color: tomato;
+}
+.sticky-card {
+    display: flex;
+    gap: 30px;
+}
+.sticky-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sticky-card img {
+    width: 100px;
+}
+footer {
+    width: 100%;
+    color: #fff;
+    padding: 30px;
+    background-color: slategrey;
 }
